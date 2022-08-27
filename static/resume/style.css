@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "San Francisco Bold";
+    /* font-weight: 400; */
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+@font-face {
+    font-family: "San Francisco Light";
+    /* font-weight: 400; */
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-light-webfont.woff");
+}
+@font-face {
+    font-family: "San Francisco";
+    /* font-weight: 400; */
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+body {
+    font-family: "San Francisco";
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    font-size: small;
+}
+
+h1 {
+    font-family: "San Francisco Bold";
+    font-size: 375%;
+    font-weight: 800;
+    margin: 0;
+    /* line-height: 1.1; */
+}
+h2 {
+    font-family: "San Francisco Bold";
+    font-size: 200%;
+    font-weight: 400;
+    margin: 0;
+}
+
+hr {
+    /* border-top: 5px solid #000000; */
+    margin: 0.5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    /* margin: 0; */
+}
+
+
+.heading {
+    display: flex;
+}
+
+.left-heading {
+    flex: 50%;
+}
+
+.right-heading {
+    flex: 50%;
+    font-family: "San Francisco Light";
+    /* font-size: 65%; */
+    text-align: right;
+    break-inside: avoid;
+}
+
+.section {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
+}
+
+.section-title {
+
+}
+
+.section-body {
+
+}
+
+.tape {
+    display: flex;
+}
+
+.left-tape {
+    flex: 50%;
+    font-weight: bold;
+}
+
+.right-tape {
+    flex: 50%;
+    font-family: "San Francisco Light";
+    text-align: right;
+    color: gray;   
+}
+
+
+.content {
+    font-weight: 200;
+}
+
+.left-division {
+    width: 30%;
+    font-weight: bold;
+    float: left;
+}
+
+.right-division {
+    margin-left: 30%;
+    /* Change this to whatever the width of your left column is*/
+}
+.clear-division {
+    clear: both;
+}
