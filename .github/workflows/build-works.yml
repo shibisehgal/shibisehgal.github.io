@@ -1,0 +1,49 @@
+name: Build Latest Works
+
+# Bakes the Google Sheet + Drive images into static HTML so they are
+# crawlable (SEO) and self-hosted (reliable). The live works.js layer
+# already shows new pieces instantly; this just makes them permanent.
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly — lower this (e.g. "0 */6 * * *") if you want fewer commits
+  workflow_dispatch:        # adds a manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-works
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install build dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Bake gallery
+        run: npm run build
+        env:
+          GDRIVE_KEY: ${{ secrets.GDRIVE_KEY }}
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/works index.html works/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update Latest Works gallery [skip ci]"
+            git push
+          fi

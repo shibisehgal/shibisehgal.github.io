@@ -1,0 +1,66 @@
+[
+  {
+    "id": "floral-study-1",
+    "file": "static/portfolio/Floral Study 1 | Mixed media on paper | 2022.jpg",
+    "caption": "Floral Study 1",
+    "date": "2022",
+    "medium": "Mixed media on paper",
+    "featured": true
+  },
+  {
+    "id": "floral-study-2",
+    "file": "static/portfolio/Floral Study 2 | Soft pastel on paper | 2022.jpg",
+    "caption": "Floral Study 2",
+    "date": "2022",
+    "medium": "Soft pastel on paper",
+    "featured": true
+  },
+  {
+    "id": "floral-study-3",
+    "file": "static/portfolio/Floral Study 3 | Mixed media on paper | 2022.jpg",
+    "caption": "Floral Study 3",
+    "date": "2022",
+    "medium": "Mixed media on paper",
+    "featured": true
+  },
+  {
+    "id": "floral-study-4",
+    "file": "static/portfolio/Floral Study 4 | Collage and ink | 2022.jpg",
+    "caption": "Floral Study 4",
+    "date": "2022",
+    "medium": "Collage and ink",
+    "featured": true
+  },
+  {
+    "id": "floral-study-5",
+    "file": "static/portfolio/Floral Study 5 | Pen-and-ink | 2022.jpg",
+    "caption": "Floral Study 5",
+    "date": "2022",
+    "medium": "Pen-and-ink",
+    "featured": false
+  },
+  {
+    "id": "floral-study-6",
+    "file": "static/portfolio/Floral Study 6 | Soft pastel on paper | 2022.jpg",
+    "caption": "Floral Study 6",
+    "date": "2022",
+    "medium": "Soft pastel on paper",
+    "featured": false
+  },
+  {
+    "id": "floral-study-7",
+    "file": "static/portfolio/Floral Study 7 | Mixed media on paper | 2022.jpg",
+    "caption": "Floral Study 7",
+    "date": "2022",
+    "medium": "Mixed media on paper",
+    "featured": false
+  },
+  {
+    "id": "in-the-studio",
+    "file": "static/portfolio/In the Studio | Photograph | 2022.jpg",
+    "caption": "In the Studio",
+    "date": "2022",
+    "medium": "Photograph",
+    "featured": false
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "shibanisehgal-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the Latest Works gallery. The website itself is plain static HTML — these deps are only used to bake the gallery.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-works.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

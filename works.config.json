@@ -1,0 +1,6 @@
+{
+  "_comment": "driveFolderId = the shared Google Drive folder the site reads (drag-and-drop images there; filename = caption, optional 'Caption | Medium | 2024', a 'Featured' subfolder marks homepage picks). The service-account key is provided to the build via the GDRIVE_KEY env/secret. csvUrl is a legacy fallback only.",
+  "driveFolderId": "1ZL4QFpXWSKMlEFb5bO21PL1H3DCVM7MM",
+  "csvUrl": "",
+  "siteUrl": "https://www.shibanisehgal.com"
+}
