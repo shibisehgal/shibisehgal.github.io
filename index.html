@@ -1,105 +1,236 @@
-<!-- Adapted from the amazing demo here !> https://github.com/cadars/john-doe/ -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Shibani Sehgal</title>
-  <meta name="description" content="Shibani Sehgal's personal website.">
+  <title>Shibani Sehgal — Artist & Illustrator</title>
+  <meta name="description"
+    content="Shibani Sehgal is an Indian artist and illustrator working in soft pastels, pen-and-ink, collage and large canvas. View her latest works, exhibitions and portfolio.">
+  <meta name="author" content="Shibani Sehgal">
+  <meta name="keywords"
+    content="Shibani Sehgal, artist, illustrator, Indian artist, soft pastel, pen and ink, collage, paintings, New Delhi artist, contemporary art">
+  <link rel="canonical" href="https://www.shibanisehgal.com/">
+  <meta name="theme-color" content="#fbf0c4">
 
-  <meta property="og:title" content="Shibani's homepage">
-  <meta property="og:description" content="Shibani Sehgal's personal website.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shibani Sehgal">
+  <meta property="og:title" content="Shibani Sehgal — Artist & Illustrator">
+  <meta property="og:description"
+    content="Indian artist and illustrator working in soft pastels, pen-and-ink, collage and large canvas. View her latest works and portfolio.">
+  <meta property="og:url" content="https://www.shibanisehgal.com/">
+  <meta property="og:image" content="https://www.shibanisehgal.com/static/profile.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shibani Sehgal — Artist & Illustrator">
+  <meta name="twitter:description"
+    content="Indian artist and illustrator working in soft pastels, pen-and-ink, collage and large canvas.">
+  <meta name="twitter:image" content="https://www.shibanisehgal.com/static/profile.jpg">
 
-  <!-- You could also inline the stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="apple-touch-icon" href="/static/profile.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 
+  <!-- Structured data: the artist -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shibani Sehgal",
+    "url": "https://www.shibanisehgal.com/",
+    "image": "https://www.shibanisehgal.com/static/profile.jpg",
+    "email": "shibisehgal@gmail.com",
+    "jobTitle": "Artist & Illustrator",
+    "nationality": "Indian",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "College of Art, New Delhi" },
+      { "@type": "CollegeOrUniversity", "name": "National Museum Institute" }
+    ],
+    "knowsAbout": ["Soft pastel", "Pen-and-ink", "Collage", "Canvas painting", "History of Art"],
+    "sameAs": [
+      "https://www.instagram.com/shibanisehgal/",
+      "https://www.facebook.com/shibisehgal"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <header>
-    <h1>
-      <a href="#home">Shibani Sehgal</a>
-    </h1>
-    <nav>
-      <!-- <a href="#about">About</a> -->
-      <a href="#home">About</a>
-      <!-- <a href="#selected_works">Selected Works</a> -->
-      <!-- <a href="#portfolio">Portfolio</a> -->
-      <a href="https://www.instagram.com/shibanisehgal/">Instagram</a>
-      <a href="https://www.facebook.com/shibisehgal">Facebook</a>
-      <a href="static/resume/index.html">Resume</a>
-      <!-- <a href="static/resume.pdf">Resume</a> -->
-    </nav>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="#top">Shibani Sehgal</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" aria-label="Primary">
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a href="/works/">Full Gallery</a>
+        <a href="https://docs.google.com/document/d/1zhAx40rF5nYEsGmGqvBivWOvJbnQeFGFDhqAmAMdMEE/edit?usp=sharing">Resume</a>
+        <a href="https://www.instagram.com/shibanisehgal/">Instagram</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="top">
 
-    <section id="home">
-      <!-- HOME -->
-      <div class="twosplit">
-        <div class="leftsplit">
-          <h1>Hello Internet!</h1>
-
-          
-          <!-- Date of Birth 20 March 1970
-          Gender Female
-          Nationality Indian
-          Genre : collages. Mixed media on paper. -->
-          <p>I'm Shibani Sehgal. I'm an artist, illustrator and art experimentalist. I endeavour to express the emotions of nature through the use of soft pastels, pen-and-ink, collage work and large canvas work. My works have been featured in various groups and solo exhibitions, both domestic and international. They are also in collection of various eminent personalities including the Ex Vice President of India.</p>
-          <p>As an artist, illustrator and art experimentalist, I exhibit versatility and flexibility in my continuing adventure with colors and various media. I hope to inspire everyone to look towards art as a means of expression that transcends language and extends into the realm of unfettered freedom of exploration.</p>
-          <p>I graduated from College of Art (1992), New Delhi with a Masters in History of Art from the National Museum Institute (1995). I was awarded the gold medal by the National Museum Institute for my research on the works.</p>
-          <p>Feel free to reach out to me at: <code>shibisehgal@gmail.com</code></p>
-          
-        </div>
-        <div class="rightsplit">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1>Shibani Sehgal</h1>
+            <p class="hero-tagline">Expressing the emotions of nature, in colour and form.</p>
+            <p class="lead">
+              I'm an artist, illustrator and art experimentalist. I work in soft pastels,
+              pen-and-ink, collage and large canvas, and I've shown in group and solo
+              exhibitions across India and abroad. My work also lives in the collections of
+              several eminent personalities, including the former Vice President of India.
+            </p>
+          </div>
           <figure>
-            <img src="static/profile.jpg" width="498" height="664" alt="A picture of me at a beach.">
+            <img src="static/profile.jpg" width="498" height="664"
+              alt="Portrait of artist Shibani Sehgal" loading="eager">
           </figure>
         </div>
       </div>
-      
     </section>
 
-    <!-- PORTFOLIO -->
-    <!-- <section id="portfolio">
+    <!-- ========================= LATEST WORKS ======================= -->
+    <section id="works" aria-labelledby="works-h">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="works-h">Latest works</h2>
+          </div>
+          <a class="more" href="/works/">See the full gallery →</a>
+        </div>
 
-      <div class="slides">
-        <figure class="cover">
-          <img loading="lazy" alt="" src="static/portfolio/workstation.jpg">
-        </figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG20220123132818.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG20220503180058.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG20220518102828.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG20220824135239.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG_20220307_094240.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG_20220517_191447.jpg"></figure>
-        <figure style="background:#ffffff"><img loading="lazy" alt="" src="static/portfolio/IMG_20220707_184519.jpg"></figure>
-          <p>You could also have text over here…</p>
-        </figure>
-          <img loading="lazy" alt="" src="//dummyimage.com/1000x1000/ddd/bbb">
-          <figcaption>…or image captions</figcaption>
-        </figure>
-        <figure style="background:#fdcb39">
-          <img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb">
-          <figcaption>add a solid background</figcaption>
-        </figure>
-        <figure class="cover">
-          <img loading="lazy" alt="" src="https://64.media.tumblr.com/7904066936b9324571738bbbeeb082e9/tumblr_myopxy8uJI1qz4vi0o1_1280.jpg">
-          <p style="color:#fff">or go full bleed</p>
-        </figure>
-
+        <!-- Featured works. Static HTML below is generated by scripts/build-works.mjs
+             between these markers (for SEO). works.js may prepend newer items live. -->
+        <div class="gallery" id="gallery-featured" data-feed="featured">
+          <!-- WORKS:FEATURED:START -->
+<figure class="work" data-id="14d_rd425wxLzfhcTpfH9U6_P2RymPqhp">
+  <a class="thumb" href="#lb-14d_rd425wxLzfhcTpfH9U6_P2RymPqhp" aria-label="Open: Floral Study 5">
+    <img src="/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.thumb.jpg" alt="Floral Study 5 by Shibani Sehgal" loading="lazy" width="1600" height="2322">
+  </a>
+  <figcaption>
+    <div class="title">Floral Study 5</div>
+    <div class="meta"><time datetime="2022">2022</time> · Pen-and-ink</div>
+  </figcaption>
+</figure>
+<figure class="work" data-id="1kVI7351kF2yu6m_m0NCq1Fww4K355Gif">
+  <a class="thumb" href="#lb-1kVI7351kF2yu6m_m0NCq1Fww4K355Gif" aria-label="Open: Floral Study 6">
+    <img src="/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.thumb.jpg" alt="Floral Study 6 by Shibani Sehgal" loading="lazy" width="623" height="911">
+  </a>
+  <figcaption>
+    <div class="title">Floral Study 6</div>
+    <div class="meta"><time datetime="2022">2022</time> · Soft pastel on paper</div>
+  </figcaption>
+</figure>
+<figure class="work" data-id="1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp">
+  <a class="thumb" href="#lb-1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp" aria-label="Open: Floral Study 7">
+    <img src="/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.thumb.jpg" alt="Floral Study 7 by Shibani Sehgal" loading="lazy" width="1600" height="1605">
+  </a>
+  <figcaption>
+    <div class="title">Floral Study 7</div>
+    <div class="meta"><time datetime="2022">2022</time> · Mixed media on paper</div>
+  </figcaption>
+</figure>
+<!-- WORKS:FEATURED:END -->
+        </div>
       </div>
+    </section>
 
-    </section> -->
+    <!-- ============================ ABOUT =========================== -->
+    <section id="about" aria-labelledby="about-h">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="about-h">A continuing adventure with colour</h2>
+          </div>
+        </div>
+        <div class="about-grid panel fill-cream">
+          <div>
+            <p>
+              As an artist, illustrator and art experimentalist, I exhibit versatility and
+              flexibility in my continuing adventure with colours and various media. I hope to
+              inspire everyone to look towards art as a means of expression that transcends
+              language and extends into the realm of unfettered freedom of exploration.
+            </p>
+            <p>
+              I graduated from the College of Art, New Delhi (1992) and earned a Masters in
+              History of Art from the National Museum Institute (1995), where I was awarded
+              the gold medal for my research.
+            </p>
+            <p>
+              Feel free to reach out: <code>shibisehgal@gmail.com</code>
+            </p>
+          </div>
+          <dl class="about-facts">
+            <dt>Based in</dt>
+            <dd>New Delhi, India</dd>
+            <dt>Media</dt>
+            <dd>Soft pastel, pen-and-ink, collage, canvas</dd>
+            <dt>Education</dt>
+            <dd>College of Art (1992) · National Museum Institute (1995, Gold Medal)</dd>
+            <dt>Elsewhere</dt>
+            <dd>
+              <a href="https://www.instagram.com/shibanisehgal/">Instagram</a> ·
+              <a href="https://www.facebook.com/shibisehgal">Facebook</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Other images -->
+  <footer class="site">
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Shibani Sehgal</span>
+      <nav aria-label="Footer">
+        <a href="/works/">Gallery</a>
+        <a href="https://docs.google.com/document/d/1zhAx40rF5nYEsGmGqvBivWOvJbnQeFGFDhqAmAMdMEE/edit?usp=sharing">Resume</a>
+        <a href="https://www.instagram.com/shibanisehgal/">Instagram</a>
+        <a href="https://www.facebook.com/shibisehgal">Facebook</a>
+        <a href="mailto:shibisehgal@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
 
+  <!-- Lightboxes (CSS-only). Generated between markers by the build; works.js appends live. -->
+  <!-- LIGHTBOX:FEATURED:START -->
+<div class="lightbox" id="lb-14d_rd425wxLzfhcTpfH9U6_P2RymPqhp" role="dialog" aria-label="Floral Study 5">
+  <a class="close" href="#top" aria-label="Close">&times;</a>
+  <img src="/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.jpg" alt="Floral Study 5 by Shibani Sehgal">
+  <figcaption>Floral Study 5 — Pen-and-ink</figcaption>
+</div>
+<div class="lightbox" id="lb-1kVI7351kF2yu6m_m0NCq1Fww4K355Gif" role="dialog" aria-label="Floral Study 6">
+  <a class="close" href="#top" aria-label="Close">&times;</a>
+  <img src="/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.jpg" alt="Floral Study 6 by Shibani Sehgal">
+  <figcaption>Floral Study 6 — Soft pastel on paper</figcaption>
+</div>
+<div class="lightbox" id="lb-1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp" role="dialog" aria-label="Floral Study 7">
+  <a class="close" href="#top" aria-label="Close">&times;</a>
+  <img src="/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.jpg" alt="Floral Study 7 by Shibani Sehgal">
+  <figcaption>Floral Study 7 — Mixed media on paper</figcaption>
+</div>
+<!-- LIGHTBOX:FEATURED:END -->
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="nav.js" defer></script>
+  <script src="works.js" defer></script>
 </body>
 
 </html>
