@@ -44,6 +44,10 @@ const THUMB_WIDTH = 700;
 const MAIN_Q = 82;
 const THUMB_Q = 78;
 
+// Set FORCE_RESYNC=1 (env / workflow input) to re-download and overwrite EVERY
+// image, ignoring the content-hash cache — a full mirror rebuild.
+const FORCE_RESYNC = /^(1|true|yes)$/i.test(process.env.FORCE_RESYNC || "");
+
 /* ---------- small helpers ---------- */
 
 const esc = (s) =>
@@ -160,7 +164,7 @@ async function driveListChildren(folderId) {
   do {
     const params = new URLSearchParams({
       q: `'${folderId}' in parents and trashed=false`,
-      fields: "nextPageToken,files(id,name,mimeType,description,createdTime)",
+      fields: "nextPageToken,files(id,name,mimeType,description,createdTime,md5Checksum)",
       pageSize: "1000",
       supportsAllDrives: "true",
       includeItemsFromAllDrives: "true",
@@ -235,6 +239,7 @@ async function gather() {
           const pn = parseDriveName(file.name);
           return {
             id: file.id, driveId: file.id, source: "drive-api", fileId: file.id,
+            md5: file.md5Checksum || "",
             caption: pn.caption,
             medium: pn.medium || (file.description || "").trim(),
             date: pn.date || ymFromCreated(file.createdTime),
@@ -311,11 +316,14 @@ async function fetchBuffer(url) {
   return Buffer.from(await res.arrayBuffer());
 }
 
-async function ensureImages(e) {
+async function ensureImages(e, force) {
   const mainPath = resolve(WORKS_DIR, e.id + ".jpg");
   const thumbPath = resolve(WORKS_DIR, e.id + ".thumb.jpg");
 
-  if (await exists(mainPath) && await exists(thumbPath)) {
+  // Reuse the baked file only when not forced and it already exists. `force` is
+  // set when the Drive content hash changed (in-place replacement) or on a full
+  // resync — so updated artwork always re-downloads instead of serving stale.
+  if (!force && await exists(mainPath) && await exists(thumbPath)) {
     const meta = await sharp(mainPath).metadata();
     return { w: meta.width, h: meta.height };
   }
@@ -400,19 +408,29 @@ async function main() {
   const entries = await gather();
   console.log(`• ${entries.length} work(s) found`);
 
+  // Previous build's per-image content hashes, to detect in-place replacements.
+  const jsonPath = resolve(WORKS_DIR, "works.json");
+  let prevWorks = null;
+  try { prevWorks = JSON.parse(await readFile(jsonPath, "utf8")).works; } catch { /* none */ }
+  const prevMd5 = new Map((prevWorks || []).map((w) => [w.id, w.md5 || ""]));
+  if (FORCE_RESYNC) console.log("• FORCE_RESYNC on — overwriting all images");
+
   const works = [];
   for (const e of entries) {
     try {
-      const dim = await ensureImages(e);
+      // Re-download when forced, or when the Drive content hash changed.
+      const changed = e.md5 ? prevMd5.get(e.id) !== e.md5 : false;
+      const force = FORCE_RESYNC || changed;
+      const dim = await ensureImages(e, force);
       works.push({
-        id: e.id, driveId: e.driveId,
+        id: e.id, driveId: e.driveId, md5: e.md5 || "",
         caption: e.caption, date: e.date, medium: e.medium, featured: e.featured,
         alt: `${e.caption} by Shibani Sehgal`,
         src: `/static/works/${e.id}.jpg`,
         thumb: `/static/works/${e.id}.thumb.jpg`,
         w: dim.w, h: dim.h,
       });
-      console.log(`  ✓ ${e.id} (${e.source})`);
+      console.log(`  ✓ ${e.id} (${e.source}${force ? ", resynced" : ""})`);
     } catch (err) {
       console.warn(`  ✗ ${e.id}: ${err.message}`);
     }
@@ -422,9 +440,6 @@ async function main() {
 
   // Only rewrite works.json when the meaningful payload changed, so idempotent
   // runs (e.g. the hourly Action with no new art) produce no spurious commit.
-  const jsonPath = resolve(WORKS_DIR, "works.json");
-  let prevWorks = null;
-  try { prevWorks = JSON.parse(await readFile(jsonPath, "utf8")).works; } catch { /* none */ }
   if (JSON.stringify(prevWorks) !== JSON.stringify(works)) {
     await writeFile(jsonPath, JSON.stringify({ generated: new Date().toISOString(), works }, null, 2));
   }
