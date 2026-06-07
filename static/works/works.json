@@ -1,0 +1,109 @@
+{
+  "generated": "2026-06-07T14:58:26.232Z",
+  "works": [
+    {
+      "id": "14d_rd425wxLzfhcTpfH9U6_P2RymPqhp",
+      "driveId": "14d_rd425wxLzfhcTpfH9U6_P2RymPqhp",
+      "caption": "Floral Study 5",
+      "date": "2022",
+      "medium": "Pen-and-ink",
+      "featured": true,
+      "alt": "Floral Study 5 by Shibani Sehgal",
+      "src": "/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.jpg",
+      "thumb": "/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.thumb.jpg",
+      "w": 1600,
+      "h": 2322
+    },
+    {
+      "id": "1kVI7351kF2yu6m_m0NCq1Fww4K355Gif",
+      "driveId": "1kVI7351kF2yu6m_m0NCq1Fww4K355Gif",
+      "caption": "Floral Study 6",
+      "date": "2022",
+      "medium": "Soft pastel on paper",
+      "featured": true,
+      "alt": "Floral Study 6 by Shibani Sehgal",
+      "src": "/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.jpg",
+      "thumb": "/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.thumb.jpg",
+      "w": 623,
+      "h": 911
+    },
+    {
+      "id": "1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp",
+      "driveId": "1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp",
+      "caption": "Floral Study 7",
+      "date": "2022",
+      "medium": "Mixed media on paper",
+      "featured": true,
+      "alt": "Floral Study 7 by Shibani Sehgal",
+      "src": "/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.jpg",
+      "thumb": "/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.thumb.jpg",
+      "w": 1600,
+      "h": 1605
+    },
+    {
+      "id": "1fQQhZuxO7EXWxpsScAFmYrpBRNpa7vD-",
+      "driveId": "1fQQhZuxO7EXWxpsScAFmYrpBRNpa7vD-",
+      "caption": "Floral Study 1",
+      "date": "2022",
+      "medium": "Mixed media on paper",
+      "featured": false,
+      "alt": "Floral Study 1 by Shibani Sehgal",
+      "src": "/static/works/1fQQhZuxO7EXWxpsScAFmYrpBRNpa7vD-.jpg",
+      "thumb": "/static/works/1fQQhZuxO7EXWxpsScAFmYrpBRNpa7vD-.thumb.jpg",
+      "w": 1600,
+      "h": 2133
+    },
+    {
+      "id": "1YYYOfsWhOKxATVylOLyjbxJLN_Ha_oRG",
+      "driveId": "1YYYOfsWhOKxATVylOLyjbxJLN_Ha_oRG",
+      "caption": "Floral Study 2",
+      "date": "2022",
+      "medium": "Soft pastel on paper",
+      "featured": false,
+      "alt": "Floral Study 2 by Shibani Sehgal",
+      "src": "/static/works/1YYYOfsWhOKxATVylOLyjbxJLN_Ha_oRG.jpg",
+      "thumb": "/static/works/1YYYOfsWhOKxATVylOLyjbxJLN_Ha_oRG.thumb.jpg",
+      "w": 1600,
+      "h": 2133
+    },
+    {
+      "id": "101cSWRWh_BDavcYNTxH3wsXKE96MWmuj",
+      "driveId": "101cSWRWh_BDavcYNTxH3wsXKE96MWmuj",
+      "caption": "Floral Study 3",
+      "date": "2022",
+      "medium": "Mixed media on paper",
+      "featured": false,
+      "alt": "Floral Study 3 by Shibani Sehgal",
+      "src": "/static/works/101cSWRWh_BDavcYNTxH3wsXKE96MWmuj.jpg",
+      "thumb": "/static/works/101cSWRWh_BDavcYNTxH3wsXKE96MWmuj.thumb.jpg",
+      "w": 1600,
+      "h": 2133
+    },
+    {
+      "id": "1tSW-xD1dTiu6lbe2getsyXVkMKzu_590",
+      "driveId": "1tSW-xD1dTiu6lbe2getsyXVkMKzu_590",
+      "caption": "Floral Study 4",
+      "date": "2022",
+      "medium": "Collage and ink",
+      "featured": false,
+      "alt": "Floral Study 4 by Shibani Sehgal",
+      "src": "/static/works/1tSW-xD1dTiu6lbe2getsyXVkMKzu_590.jpg",
+      "thumb": "/static/works/1tSW-xD1dTiu6lbe2getsyXVkMKzu_590.thumb.jpg",
+      "w": 1600,
+      "h": 2133
+    },
+    {
+      "id": "17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw",
+      "driveId": "17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw",
+      "caption": "In the Studio",
+      "date": "2022",
+      "medium": "Photograph",
+      "featured": false,
+      "alt": "In the Studio by Shibani Sehgal",
+      "src": "/static/works/17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw.jpg",
+      "thumb": "/static/works/17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw.thumb.jpg",
+      "w": 1600,
+      "h": 2133
+    }
+  ]
+}
