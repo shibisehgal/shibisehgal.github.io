@@ -382,6 +382,65 @@ function lightboxHTML(w) {
   ].join("\n");
 }
 
+/* ---------- SEO: image sitemap + structured data ---------- */
+
+function imageObject(SITE, w) {
+  const o = {
+    "@type": "ImageObject",
+    name: w.caption,
+    contentUrl: SITE + w.src,
+    thumbnailUrl: SITE + w.thumb,
+    creator: { "@type": "Person", name: "Shibani Sehgal" },
+  };
+  if (w.medium) o.artMedium = w.medium;
+  return o;
+}
+
+/* Inline <script type="application/ld+json"> for an ImageGallery of given works. */
+function galleryJsonLd(SITE, works, name, pageUrl) {
+  const obj = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name,
+    url: pageUrl,
+    author: { "@type": "Person", name: "Shibani Sehgal", url: SITE + "/" },
+    associatedMedia: works.map((w) => imageObject(SITE, w)),
+  };
+  return '<script type="application/ld+json">\n' + JSON.stringify(obj, null, 2) + "\n</script>";
+}
+
+/* sitemap.xml with <image:image> entries so Google Images can index the art.
+   Deterministic (no volatile lastmod) so unchanged builds produce no diff. */
+function sitemapXml(SITE, works) {
+  const imgs = (list) => list.map((w) => [
+    "    <image:image>",
+    `      <image:loc>${esc(SITE + w.src)}</image:loc>`,
+    `      <image:title>${esc(w.caption)}</image:title>`,
+    w.medium ? `      <image:caption>${esc(w.caption + " — " + w.medium)}</image:caption>` : "",
+    "    </image:image>",
+  ].filter(Boolean).join("\n")).join("\n");
+  const featured = works.filter((w) => w.featured);
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    "  <url>",
+    `    <loc>${SITE}/</loc>`,
+    "    <changefreq>weekly</changefreq>",
+    "    <priority>1.0</priority>",
+    imgs(featured.length ? featured : works.slice(0, 6)),
+    "  </url>",
+    "  <url>",
+    `    <loc>${SITE}/works/</loc>`,
+    "    <changefreq>weekly</changefreq>",
+    "    <priority>0.8</priority>",
+    imgs(works),
+    "  </url>",
+    "</urlset>",
+    "",
+  ].filter((l) => l !== "").join("\n");
+}
+
 function inject(html, name, content) {
   const start = `<!-- ${name}:START -->`, end = `<!-- ${name}:END -->`;
   const s = html.indexOf(start), eIdx = html.indexOf(end);
@@ -439,7 +498,11 @@ async function main() {
   const featuredOrAll = featured.length ? featured : works.slice(0, 6); // never empty
   const emptyMsg = `<p class="gallery-empty">New works will appear here soon.</p>`;
 
-  // index.html — featured strip
+  // Site URL for absolute links in sitemap + structured data.
+  const cfg = JSON.parse(await readFile(resolve(ROOT, "works.config.json"), "utf8"));
+  const SITE = (cfg.siteUrl || "https://www.shibanisehgal.com").replace(/\/+$/, "");
+
+  // index.html — featured strip + featured-works structured data
   {
     const file = resolve(ROOT, "index.html");
     let html = await readFile(file, "utf8");
@@ -447,18 +510,28 @@ async function main() {
       featuredOrAll.length ? featuredOrAll.map(cardHTML).join("\n") : emptyMsg);
     html = inject(html, "LIGHTBOX:FEATURED",
       featuredOrAll.map(lightboxHTML).join("\n"));
+    html = inject(html, "HOMELD",
+      galleryJsonLd(SITE, featuredOrAll, "Latest works by Shibani Sehgal", SITE + "/"));
     await writeFile(file, html);
     console.log(`• index.html: ${featuredOrAll.length} featured card(s)`);
   }
 
-  // works/index.html — everything
+  // works/index.html — everything + full gallery structured data
   {
     const file = resolve(ROOT, "works/index.html");
     let html = await readFile(file, "utf8");
     html = inject(html, "WORKS:ALL", works.length ? works.map(cardHTML).join("\n") : emptyMsg);
     html = inject(html, "LIGHTBOX:ALL", works.map(lightboxHTML).join("\n"));
+    html = inject(html, "GALLERYLD",
+      galleryJsonLd(SITE, works, "Works by Shibani Sehgal", SITE + "/works/"));
     await writeFile(file, html);
     console.log(`• works/index.html: ${works.length} card(s)`);
+  }
+
+  // sitemap.xml with image entries (for Google Images discovery)
+  if (works.length) {
+    await writeFile(resolve(ROOT, "sitemap.xml"), sitemapXml(SITE, works));
+    console.log(`• sitemap.xml: ${works.length} image entr(ies)`);
   }
 
   console.log("✓ Done.");

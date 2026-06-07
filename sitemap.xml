@@ -1,13 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.shibanisehgal.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.jpg</image:loc>
+      <image:title>Floral Study 5</image:title>
+      <image:caption>Floral Study 5 — Pen-and-ink</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.jpg</image:loc>
+      <image:title>Floral Study 6</image:title>
+      <image:caption>Floral Study 6 — Soft pastel on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.jpg</image:loc>
+      <image:title>Floral Study 7</image:title>
+      <image:caption>Floral Study 7 — Mixed media on paper</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.shibanisehgal.com/works/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/14d_rd425wxLzfhcTpfH9U6_P2RymPqhp.jpg</image:loc>
+      <image:title>Floral Study 5</image:title>
+      <image:caption>Floral Study 5 — Pen-and-ink</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1kVI7351kF2yu6m_m0NCq1Fww4K355Gif.jpg</image:loc>
+      <image:title>Floral Study 6</image:title>
+      <image:caption>Floral Study 6 — Soft pastel on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.jpg</image:loc>
+      <image:title>Floral Study 7</image:title>
+      <image:caption>Floral Study 7 — Mixed media on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1fQQhZuxO7EXWxpsScAFmYrpBRNpa7vD-.jpg</image:loc>
+      <image:title>Floral Study 1</image:title>
+      <image:caption>Floral Study 1 — Mixed media on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1YYYOfsWhOKxATVylOLyjbxJLN_Ha_oRG.jpg</image:loc>
+      <image:title>Floral Study 2</image:title>
+      <image:caption>Floral Study 2 — Soft pastel on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/101cSWRWh_BDavcYNTxH3wsXKE96MWmuj.jpg</image:loc>
+      <image:title>Floral Study 3</image:title>
+      <image:caption>Floral Study 3 — Mixed media on paper</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/1tSW-xD1dTiu6lbe2getsyXVkMKzu_590.jpg</image:loc>
+      <image:title>Floral Study 4</image:title>
+      <image:caption>Floral Study 4 — Collage and ink</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.shibanisehgal.com/static/works/17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw.jpg</image:loc>
+      <image:title>In the Studio</image:title>
+      <image:caption>In the Studio — Photograph</image:caption>
+    </image:image>
   </url>
 </urlset>
