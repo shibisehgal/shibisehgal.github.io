@@ -160,7 +160,7 @@
           });
         });
       })
-      .catch(function (e) { if (window.console) console.warn("works.js:", e.message); });
+      .catch(function () { /* static content already present; fail silently */ });
   }
 
   if (document.readyState === "loading") {
