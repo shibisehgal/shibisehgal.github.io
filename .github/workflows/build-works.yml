@@ -1,19 +1,14 @@
 name: Build Latest Works
 
 # Mirrors the Google Drive folder into static HTML/images so they are
-# crawlable (SEO) and self-hosted (reliable). Each run is a full re-sync:
-# new images are added, deleted ones pruned, and replaced ones re-downloaded
-# (detected by content hash). Use the force_resync input to overwrite all.
+# crawlable (SEO) and self-hosted (reliable). Each run is a full override:
+# every image is re-downloaded, deleted ones pruned — the gallery always
+# matches Drive exactly.
 
 on:
   schedule:
-    - cron: "0 * * * *"   # hourly — lower this (e.g. "0 */6 * * *") if you want fewer commits
+    - cron: "0 6 * * *"   # daily at 06:00 UTC
   workflow_dispatch:        # adds a manual "Run workflow" button in the Actions tab
-    inputs:
-      force_resync:
-        description: "Overwrite ALL images (full re-download, ignore cache)"
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -41,7 +36,6 @@ jobs:
         run: npm run build
         env:
           GDRIVE_KEY: ${{ secrets.GDRIVE_KEY }}
-          FORCE_RESYNC: ${{ inputs.force_resync }}
 
       - name: Commit changes (if any)
         run: |
