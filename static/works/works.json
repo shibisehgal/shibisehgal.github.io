@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-14T09:29:36.410Z",
+  "generated": "2026-07-18T07:43:35.876Z",
   "works": [
     {
       "id": "10T69ZBCt9A7YmzOahKJJ6d6hoGStbmF6",
@@ -286,32 +286,6 @@
       "thumb": "/static/works/1LzQJ6y2qIREVdTL3qtBXSJOHUHTq4pKl.thumb.jpg",
       "w": 1600,
       "h": 1085
-    },
-    {
-      "id": "1DHR1BnZA5_4IpyEaZ7SX_Ig70Y5WzZnp",
-      "driveId": "1DHR1BnZA5_4IpyEaZ7SX_Ig70Y5WzZnp",
-      "caption": "Final6",
-      "date": "2025-08",
-      "medium": "",
-      "featured": false,
-      "alt": "Final6 by Shibani Sehgal",
-      "src": "/static/works/1DHR1BnZA5_4IpyEaZ7SX_Ig70Y5WzZnp.jpg",
-      "thumb": "/static/works/1DHR1BnZA5_4IpyEaZ7SX_Ig70Y5WzZnp.thumb.jpg",
-      "w": 1600,
-      "h": 2898
-    },
-    {
-      "id": "1CHhlw8JNxnrKnMfrKLDBym7Rbwt4j1by",
-      "driveId": "1CHhlw8JNxnrKnMfrKLDBym7Rbwt4j1by",
-      "caption": "Final7",
-      "date": "2025-08",
-      "medium": "",
-      "featured": false,
-      "alt": "Final7 by Shibani Sehgal",
-      "src": "/static/works/1CHhlw8JNxnrKnMfrKLDBym7Rbwt4j1by.jpg",
-      "thumb": "/static/works/1CHhlw8JNxnrKnMfrKLDBym7Rbwt4j1by.thumb.jpg",
-      "w": 1600,
-      "h": 2769
     },
     {
       "id": "1bvftMXSeHsYOPZIN0TSlle8st_lrjJAo",
