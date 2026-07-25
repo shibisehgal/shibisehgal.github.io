@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T08:26:59.639Z",
+  "generated": "2026-07-25T08:02:03.980Z",
   "works": [
     {
       "id": "10T69ZBCt9A7YmzOahKJJ6d6hoGStbmF6",
@@ -13,6 +13,32 @@
       "thumb": "/static/works/10T69ZBCt9A7YmzOahKJJ6d6hoGStbmF6.thumb.jpg",
       "w": 1600,
       "h": 1022
+    },
+    {
+      "id": "1Dt9RDooKNQLg3GTh8YXKmDcHaixtaNSl",
+      "driveId": "1Dt9RDooKNQLg3GTh8YXKmDcHaixtaNSl",
+      "caption": "Final1",
+      "date": "2025-08",
+      "medium": "",
+      "featured": false,
+      "alt": "Final1 by Shibani Sehgal",
+      "src": "/static/works/1Dt9RDooKNQLg3GTh8YXKmDcHaixtaNSl.jpg",
+      "thumb": "/static/works/1Dt9RDooKNQLg3GTh8YXKmDcHaixtaNSl.thumb.jpg",
+      "w": 1600,
+      "h": 1022
+    },
+    {
+      "id": "1zgDxJrOLw8qqpWlGVXk4CSxU0_U9V8nP",
+      "driveId": "1zgDxJrOLw8qqpWlGVXk4CSxU0_U9V8nP",
+      "caption": "Final10",
+      "date": "2025-08",
+      "medium": "",
+      "featured": false,
+      "alt": "Final10 by Shibani Sehgal",
+      "src": "/static/works/1zgDxJrOLw8qqpWlGVXk4CSxU0_U9V8nP.jpg",
+      "thumb": "/static/works/1zgDxJrOLw8qqpWlGVXk4CSxU0_U9V8nP.thumb.jpg",
+      "w": 1600,
+      "h": 2839
     },
     {
       "id": "1PfEzIf1JGXr_Wjrx_kOMhn0z0LFeDkG5",
@@ -325,6 +351,19 @@
       "thumb": "/static/works/1K-ptzSSHSXsEaXett1WC6rmeGuFRoNjp.thumb.jpg",
       "w": 1600,
       "h": 1605
+    },
+    {
+      "id": "17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw",
+      "driveId": "17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw",
+      "caption": "In the Studio",
+      "date": "2022",
+      "medium": "Photograph",
+      "featured": false,
+      "alt": "In the Studio by Shibani Sehgal",
+      "src": "/static/works/17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw.jpg",
+      "thumb": "/static/works/17T4kAetx8N9Idhpsq7SW_Oa3ClDchihw.thumb.jpg",
+      "w": 1600,
+      "h": 2133
     }
   ]
 }
